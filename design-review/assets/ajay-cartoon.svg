@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" fill="none">
+  <title>Ajay waving hello</title>
+  <desc>A classic cartoon portrait with swept dark hair, black glasses, a white sweatshirt and his right hand raised in a wave.</desc>
+  <style>
+    .wave-arm{transform-origin:119px 246px}
+    svg:hover .wave-arm{animation:hello-wave .85s ease-in-out 3}
+    @keyframes hello-wave{0%,100%{transform:rotate(0)}25%{transform:rotate(5deg)}65%{transform:rotate(-5deg)}}
+    @media(prefers-reduced-motion:reduce){.wave-arm{animation:none!important}}
+  </style>
+  <defs>
+    <g id="ajay-hand">
+      <path d="M108 252 L107 238 C99 232 96 225 93 218 L87 202 C85 196 91 193 94 198 L101 211 L96 185 C95 179 102 178 104 184 L110 206 L109 177 C109 171 116 171 117 177 L118 205 L122 182 C123 176 130 178 129 184 L127 212 L134 206 C139 202 144 207 140 212 L132 224 C128 230 128 237 130 251 Z" fill="#d7a17a"/>
+      <path d="M127 212 L134 206 C139 202 144 207 140 212 L132 224 C128 230 128 237 130 251 L122 252 C123 239 119 235 122 225 C124 220 127 217 127 212Z" fill="#bc825a" stroke="none"/>
+      <path d="M101 215 C102 221 105 225 109 227" stroke="#e9b991" stroke-width="4"/>
+      <path d="M109 225 C112 218 119 217 126 220" stroke="#9e6949" stroke-width="2"/>
+      <path d="M111 232 Q116 230 119 233" stroke="#b47b55" stroke-width="1.5"/>
+    </g>
+    <clipPath id="right-wrist-sleeve-clip" clipPathUnits="userSpaceOnUse">
+      <path d="M45 80 H185 V236 L136 244 Q119 249 100 250 L45 260 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="241" cy="216" r="157" fill="#e4e9d9"/>
+  <circle cx="241" cy="216" r="173" stroke="#a6b29a" stroke-dasharray="2 8"/>
+  <path d="M78 350h324" stroke="#b6c0ab"/>
+  <g stroke="#283331" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m171 371-8 65h68l10-47 11 47h68l-13-65" fill="#91aabb"/>
+    <path d="M239 392v43M181 394l28 9M292 394l-25 9" stroke="#5c798a" stroke-width="2"/>
+    <!-- Both hands reuse identical geometry and the same uniform scale. -->
+    <use href="#ajay-hand" transform="translate(342 350) rotate(168) scale(1.05) translate(-119 -246)"/>
+    <path d="M208 228 C190 232 179 241 168 255 L148 278 Q140 286 136 276 L136 244 L100 250 L108 283 C115 301 124 308 136 307 C147 307 156 299 171 285 L161 373 C206 391 265 391 312 373 L300 286 L325 355 Q342 361 360 349 L329 278 C317 248 294 234 265 228" fill="#faf9f3"/>
+    <path d="M323 344 Q339 350 356 339" stroke="#b9c5be" stroke-width="2.5"/>
+    <path d="M326 355 Q342 361 359 349" stroke="#72847b" stroke-width="8"/>
+    <rect x="335" y="349" width="16" height="14" rx="4" transform="rotate(-15 335 349)" fill="#283331" stroke-width="2"/>
+    <path d="M126 291q7 4 13-1M171 262l6 10" stroke="#c7d0cb" stroke-width="2.5"/>
+    <path d="M170 359c42 11 90 11 134 0l8 14c-47 18-106 18-151 0z" fill="#e0e5e2"/>
+    <path d="m180 292-4 46m117-47 3 42" stroke="#c7d0cb" stroke-width="2.5"/>
+    <path d="M211 206v27c13 18 36 20 51 0v-29" fill="#cc946c"/>
+    <path d="M211 216c16 11 33 11 51 0v13c-16 13-35 11-51-1" fill="#b78059" stroke="none"/>
+    <path d="M202 235c17 22 49 23 68 0" stroke="#c7d0cb" stroke-width="6"/>
+    <path d="M196 139c-12-13-22 0-16 16 3 10 10 16 17 15m79-30c13-12 23 1 16 17-4 9-10 13-16 13" fill="#cc946c"/>
+    <path d="M192 118c0-36 90-42 91 0l-4 54c-1 30-21 54-43 54s-42-24-44-54z" fill="#d7a17a"/>
+    <path d="M194 156c-1 21 4 44 17 56m65-57c1 22-5 43-17 56" stroke="#c48b64" stroke-width="2"/>
+    <path d="M188 144c-8-18-9-36 0-49-4-15 9-26 25-28 12-17 40-16 56-4 15-1 28 10 29 25 2 13-5 31-16 47l-5-26c-21 1-42-6-48-18-7 17-20 24-34 27z" fill="#303733"/>
+    <path d="M201 97c14-24 40-27 63-16m-54 22c15-17 35-20 51-13" stroke="#566050" stroke-width="3"/>
+    <path d="m203 134 17-3m29 0 17 3" stroke-width="4"/>
+    <rect x="194" y="139" width="36" height="26" rx="8" fill="#ffffff15" stroke-width="4"/>
+    <rect x="243" y="139" width="36" height="26" rx="8" fill="#ffffff15" stroke-width="4"/>
+    <path d="M230 146c4-4 9-4 13 0m-49-3-10-3m95 3 8-3" stroke-width="4"/>
+    <path d="m200 145 9-2m40 2 9-2" stroke="#fff" stroke-width="2"/>
+    <ellipse cx="216" cy="151" rx="3" ry="4.5" fill="#283331" stroke="none"/>
+    <ellipse cx="256" cy="151" rx="3" ry="4.5" fill="#283331" stroke="none"/>
+    <path d="m236 155-4 17 8 2" stroke="#a66e4b" stroke-width="2.5"/>
+    <path d="M221 190c9 10 22 10 31-1" fill="#fff"/>
+    <path d="M222 184c7-4 10-4 14-1 4-3 8-3 14 0" stroke="#805e46" stroke-width="2"/>
+    <path d="M223 211c9 4 17 4 25-1" stroke="#9a6d50" stroke-width="2" stroke-dasharray="1 4"/>
+    <!-- Animate only the hand around its wrist; keep the shoulder and sleeve connected. -->
+    <g clip-path="url(#right-wrist-sleeve-clip)">
+    <g class="wave-arm">
+    <use href="#ajay-hand" transform="translate(119 249) scale(1.05) translate(-119 -246)"/>
+    </g>
+    </g>
+    <!-- Shirt-coloured overlap masks the wrist's lower edge without a detached cuff box. -->
+    <path d="M99 250 Q119 249 137 244 L139 256 Q121 262 103 263Z" fill="#faf9f3" stroke="none"/>
+    <path d="M100 250 Q119 249 136 244 M100 250 L104 266 M136 244 L140 261" stroke="#283331" stroke-width="3.5"/>
+    <path d="m212 288-13 9 13 9m47-18 13 9-13 9m-18-24-8 30" stroke="#7b8c83" stroke-width="2.5"/>
+  </g>
+  <g class="hello-spark" transform="translate(480 0) scale(-1 1)" stroke="#294ed0" stroke-width="3" stroke-linecap="round">
+    <path d="m394 162 8-9m-20 1 2-11m18 33 11-2"/>
+  </g>
+  <g fill="#294ed0"><path d="m380 202 3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/><circle cx="352" cy="77" r="4"/></g>
+</svg>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ajay Portfolio Design"
+  short_description: "Evolve Ajay's portfolio with consistent design context"
+  default_prompt: "Use $ajay-portfolio-design to refine my portfolio using the documented direction and verified project content."

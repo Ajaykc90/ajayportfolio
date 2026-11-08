@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Local accessibility audit</title></head><body>
+<h1>Local accessibility audit</h1><p>Development-only WCAG 2.2 AA checks. Not a certification.</p>
+<button id="run">Run all themes</button><pre id="result" aria-live="polite">Ready</pre>
+<button id="spacing">Toggle WCAG text spacing</button>
+<iframe id="site" title="Portfolio under test" src="../index.html" style="width:100%;height:900px;border:0"></iframe>
+<script>
+const frame=document.querySelector('#site'), result=document.querySelector('#result');
+document.querySelector('#spacing').onclick=()=>{
+ const d=frame.contentDocument,existing=d.querySelector('#spacing-test');
+ if(existing){existing.remove();return;}
+ const s=d.createElement('style');s.id='spacing-test';
+ s.textContent='*{line-height:1.5!important;letter-spacing:.12em!important;word-spacing:.16em!important}p{margin-bottom:2em!important}';d.head.append(s);
+};
+document.querySelector('#run').onclick=async()=>{
+ result.textContent='Running…';
+ try {
+ const w=frame.contentWindow,d=frame.contentDocument;
+ if(!w.axe)await new Promise((resolve,reject)=>{const s=d.createElement('script');s.src='audit/axe.min.js';s.onload=resolve;s.onerror=reject;d.head.append(s)});
+ const results=[];
+ for(const theme of ['editorial','night','quiet']){
+ d.querySelector(`[data-style="${theme}"]`).click();
+ d.querySelectorAll('details').forEach(el=>el.open=true);
+ await w.document.fonts.ready;
+ await new Promise(resolve=>setTimeout(resolve,350));
+ const report=await w.axe.run(d,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});
+ results.push({theme,violations:report.violations.map(v=>({id:v.id,impact:v.impact,help:v.help,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})),incomplete:report.incomplete.map(v=>({id:v.id,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})),passes:report.passes.length});
+ }
+ result.textContent=JSON.stringify(results,null,2);
+ }catch(e){result.textContent=String(e)}
+};
+</script></body></html>
