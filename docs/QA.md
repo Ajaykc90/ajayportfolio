@@ -2,6 +2,13 @@
 
 Date: 8 November 2026.
 
+## Live style selector restoration
+
+Restored Editorial, Midnight and Quiet controls at the user's request. Production
+build and JavaScript syntax checks pass. In the production preview, Enter selected
+Midnight and Space selected Quiet; both updated body theme and aria-pressed correctly.
+Clicking Editorial restored the default and updated the shareable theme URL.
+
 ## Accessibility review
 
 The later dedicated review supersedes earlier keyboard/contrast verification limits for the checks it actually covers. See `ACCESSIBILITY.md`: zero axe WCAG A/AA violations across all themes, full Tab traversal, skip/in-page focus, disclosure Enter/Space, portrait Space/Escape, 320px reflow and desktop text-spacing checks. Screen-reader, OS preference and production-document checks remain outstanding as documented there.

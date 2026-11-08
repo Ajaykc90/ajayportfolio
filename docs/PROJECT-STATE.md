@@ -4,6 +4,10 @@ Updated: 8 November 2026 (Australia/Sydney).
 
 ## Production handoff — supersedes local-only status below
 
+User explicitly requested restoring all three styles on the live site. Restored the
+keyboard-operable Editorial / Midnight / Quiet selector, labelled “Choose your style”
+rather than design-study controls. Existing theme URL sharing and pressed states remain.
+
 The user explicitly requested publishing all code to GitHub and the existing Netlify site.
 Repository: https://github.com/Ajaykc90/ajayportfolio, branch `main`.
 Netlify project: `modest-lewin-61e8a8`, existing domain https://www.ajaykc.com.
